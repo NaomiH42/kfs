@@ -16,3 +16,13 @@ gdt_flush:
 
 .reload_cs:
    ret
+
+
+extern gdt_test
+
+gdt_test:
+   mov eax, esp   ; Save current ESP
+   push 0x1234
+   pop ebx
+   cmp eax, esp   ; ESP should return to original value
+   ret

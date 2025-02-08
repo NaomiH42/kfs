@@ -50,6 +50,8 @@ void printk(Terminal terminal) {
 
 }
 
+extern "C" void gdt_test();
+
 extern "C" void kernel_main() {
 	init_gdt();
 
@@ -65,7 +67,7 @@ extern "C" void kernel_main() {
 	terminal.write_c("     #+#    #+#            #+#   #+#  #+#        #+#    #+#\n", VGA_COLOR_LIGHT_MAGENTA);
 	terminal.write_c("    ###   ###########      ###    ### ###        ########\n", VGA_COLOR_LIGHT_MAGENTA);
 	terminal.write("\n\n");
-	
+	gdt_test();
 	
 	printk(terminal);
 

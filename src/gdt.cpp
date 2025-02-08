@@ -27,10 +27,10 @@ void init_gdt() {
     set_gdt_entry(0, 0, 0, 0, 0);
     set_gdt_entry(1, 0, 0xFFFFFFFF, 0x9A, 0xCF); // kernel code. 0x9A - flags, limit + gran set 4 KiB page
     set_gdt_entry(2, 0, 0xFFFFFFFF, 0x92, 0xCF); // kernel data. 0x9A - flags, limit + gran set 4 KiB page
-    set_gdt_entry(3, 0, 0xFFFFFFFF, 0x92, 0xCF); // kernel stack - using data
+    set_gdt_entry(3, 0, 0xFFFFFFFF, 0x96, 0xCF); // kernel stack - using data
     set_gdt_entry(4, 0, 0xFFFFFFFF, 0xFA, 0xCF); // user code. 0x9A - flags, limit + gran set 4 KiB page
     set_gdt_entry(5, 0, 0xFFFFFFFF, 0xF2, 0xCF); // user data. 0x9A - flags, limit + gran set 4 KiB page
-    set_gdt_entry(6, 0, 0xFFFFFFFF, 0xF2, 0xCF); // user stack - using data
+    set_gdt_entry(6, 0, 0xFFFFFFFF, 0xF6, 0xCF); // user stack - using data
 
 
     gdt_flush(reinterpret_cast<uint32_t>(gdt_ptr));
