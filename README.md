@@ -1,4 +1,4 @@
-# 42OperatingSystemFullyFunctionalandCool
+# KFS
 
 This project is a minimal, bare-metal operating system kernel written in C++ and assembly. It serves as a learning platform for low-level OS development and demonstrates key concepts such as booting via GRUB, kernel initialization, setting up the Global Descriptor Table (GDT), handling VGA text mode output, and controlling the binary layout with a custom linker script.
 
@@ -150,23 +150,23 @@ This operating system kernel is designed for educational purposes. It runs in 32
 2. **Build the Kernel:**  
    Run the following command in the project root:
 ```bash
-make
+   make
 ```
-    This compiles the C++ and assembly source files, links them into os.bin, and then creates a bootable ISO image (os.iso).
+   This compiles the C++ and assembly source files, links them into os.bin, and then creates a bootable ISO image (os.iso).
 
-3. **Run the Kernel:**
-    To test the kernel in an emulated environment:
+4. **Run the Kernel:**
+   To test the kernel in an emulated environment:
 ```bash
-make run
+    make run
 ```
-QEMU will launch the ISO image, and you should see the ASCII art banner, GDT test, and the printed GDT entries on the screen.
+  QEMU will launch the ISO image, and you should see the ASCII art banner, GDT test, and the printed GDT entries on the screen.
 
 4. **Clean Build Artifacts:**
-To remove compiled files and directories:
-
-make clean
-
-For a complete clean-up:
-
+  To remove compiled files and directories:
+```
+  make clean
+```
+  For a complete clean-up:
+```
     make fclean
-
+```
