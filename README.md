@@ -26,8 +26,8 @@ This operating system kernel is designed for educational purposes. It runs in 32
 ---
 
 ## Project Structure
-
-. ├── Makefile # Automates build, ISO generation, and QEMU execution
+```
+├── Makefile # Automates build, ISO generation, and QEMU execution
 ├── src
 │
 ├── linker.ld # Custom linker script defining memory layout
@@ -47,7 +47,7 @@ This operating system kernel is designed for educational purposes. It runs in 32
 │ 
 └── headers.hpp # Common definitions, data structures, and prototypes 
 └── isodir # Temporary directory for generating the bootable ISO image
-
+```
 ---
 
 ## How It Works
