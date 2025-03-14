@@ -38,7 +38,7 @@ bootable_image:
 	mkdir -p isodir/boot/grub
 	cp os.bin isodir/boot/os.bin
 	cp $(SRC_F)/grub.cfg isodir/boot/grub/grub.cfg
-	grub-mkrescue -o os.iso isodir
+	grub2-mkrescue -o os.iso isodir
 
 run:
 	qemu-system-i386 -cdrom os.iso
